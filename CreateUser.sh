@@ -48,6 +48,8 @@ create() {
     echo "Username: $NewUser" > "$CredFile"
     echo "Password: $Password" >> "$CredFile"
     echo "" >> "$CredFile"
+    chmod 700 "$CredFile"
+    chown admin:admin "$CredFile"
 
     echo "User '$NewUser' created. Access credentials saved into '$CredFile'."
 
