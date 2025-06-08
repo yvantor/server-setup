@@ -3,7 +3,7 @@
 HomeAccessGroup="homeaccess"
 Admin="admin"
 UsersDir="/home/admin/users"
-DesktopEnv="xfce"
+DesktopEnv="gnome"
 Geometry="1920x1080"
 
 if ! getent group "$HomeAccessGroup" > /dev/null; then
