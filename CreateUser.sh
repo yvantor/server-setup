@@ -33,6 +33,9 @@ create() {
 
     mkdir -p "$NewUserDir"
     useradd -m -s /bin/bash "$NewUser"
+    # add user to the plugdev and dialout group
+    useradd -G plugdev "$NewUser"
+    useradd -G dialout "$NewUser"
     echo "$NewUser:$Password" | chpasswd
 
     cp /home/"$Admin"/.bashrc /home/"$NewUser"/.bashrc
